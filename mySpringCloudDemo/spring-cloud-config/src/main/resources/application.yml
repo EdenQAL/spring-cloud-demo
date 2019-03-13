@@ -1,0 +1,33 @@
+#spring.application.name=spring-cloud-config
+#server.port=8888
+
+# eureka 服务注册地址
+#eureka.client.serviceUrl.defaultZone=http://127.0.0.1:7070/eureka/
+
+# native表示使用本地配置文件,searchLocations 表示配置中心文件搜索的位置,区别于从远程获取
+#spring.profiles.active=native
+#spring.cloud.config.server.native.searchLocations=classpath:/config
+#
+#
+#application.yml
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://127.0.0.1:7070/eureka/
+
+server:
+  port: 7071
+
+#配置当前服务的名称
+spring:
+  application:
+    name: spring-cloud-config #配置服务名称
+  profiles:
+    active: native #设置为本地启动的方式，而不是通过git
+  cloud:
+    config:
+      server:
+        native:
+#          searchLocations: file:///E:/config   # 配置文件所在目录，classpath（类路径）和（系统文件路径） file两种
+          searchLocations: classpath:/properties/   # 配置文件所在目录，classpath（类路径）和（系统文件路径） file两种
