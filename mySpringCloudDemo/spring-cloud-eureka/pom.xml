@@ -13,8 +13,7 @@
     <artifactId>eureka</artifactId>
     <packaging>jar</packaging>
 
-    <name>eureka Maven Webapp</name>
-    <!-- FIXME change it to the project's website -->
+    <name>spring-cloud-eureka</name>
     <url>http://www.example.com</url>
 
     <properties>

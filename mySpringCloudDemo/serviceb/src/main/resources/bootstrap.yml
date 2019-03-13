@@ -7,6 +7,7 @@
 #      profile: dev
 #      uri: http://127.0.0.1:8888
 
+
 eureka:
   client:
     serviceUrl:
@@ -14,15 +15,15 @@ eureka:
 
 spring:
   application:
-    name: servicea #服务名称
+    name: serviceb #服务名称
   cloud:
     config:
       enabled: true #开启配置(使spring.cloud.config.enabled 有效
       uri: http://localhost:7071 #配置服务的地址 bootstrap.yml
-      name: servicea
+      name: serviceb
       profile: dev
       label: "" #版本
 
 server:
-  port: 9091    #git配置的分支信息，master类似的
+  port: 9092    #git配置的分支信息，master类似的
 

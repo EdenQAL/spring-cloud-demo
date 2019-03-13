@@ -1,4 +1,4 @@
-package com.test.springcloudfeign;
+package com.test.servicea.model;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
