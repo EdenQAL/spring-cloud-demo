@@ -9,6 +9,7 @@
 		<module>spring-cloud-zuul</module>
 		<module>spring-cloud-config</module>
 		<module>spring-cloud-zipkin</module>
+		<module>spring-cloud-feign</module>
 	</modules>
 
 	<parent>
