@@ -42,3 +42,10 @@ management:
     web:
       exposure:
         include: hystrix.stream
+
+turbine:
+  app-config: cloud-zuul #定义需要监控的服务名，此处是监控自身，也可以把turbine项目独立出来监控其他项目
+  cluster-name-expression: new String("default")
+  combine-host-port: true
+  # 详细参数信息参考：https://www.cnblogs.com/chenweida/p/9025583.html
+
