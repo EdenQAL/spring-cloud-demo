@@ -10,7 +10,8 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @SpringBootApplication
 @EnableEurekaClient
-@EnableFeignClients //使Feign可用
+@EnableFeignClients(basePackages="com.test") //使Feign可用
+@ComponentScan(basePackages = "com.test")
 public class ServiceaApplication
 {
 

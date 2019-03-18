@@ -1,9 +1,8 @@
 package com.test.serviceb.controller;
 
 import com.test.servicea.model.TestModel;
+import com.test.servicea.service.ServiceaRemoteService;
 import com.test.serviceb.model.TestbModel;
-import com.test.servicea.service.TestaService;
-import com.test.serviceb.service.TestbService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -28,29 +27,7 @@ public class TestbController
 
 
     @Autowired
-    private TestbService testbService;
-
-    @Autowired
-    private TestaService testaService;
-
-    @GetMapping("/tt")
-    public String test(){
-//        TestbModel testModel = new TestbModel();
-
-        //调用servicea的服务
-        return testbService.get();
-    }
-
-
-    @GetMapping("/tt2")
-    public String test2(){
-
-
-        //调用servicea的服务
-        return testaService.get();
-    }
-
-
+    private ServiceaRemoteService serviceaRemoteService;
 
 
     @RequestMapping("/hello")
@@ -58,6 +35,12 @@ public class TestbController
         return "hello" + value;
     }
 
+
+    @GetMapping("/cc")
+    public String test2(){
+        //直接调用servicea对外提供的服务
+        return serviceaRemoteService.get();
+    }
 
 
 
