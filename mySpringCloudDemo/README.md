@@ -26,3 +26,9 @@ Zipkin：9411
 eureka-> config -> servicea、serviceb... -> zuul 
 
 访问：
+
+zuul: http://127.0.0.1:8888/hello-service/api
+
+zipkin: http://127.0.0.1:9411/
+
+eureka: http://127.0.0.1:7070/
